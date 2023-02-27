@@ -1,0 +1,144 @@
+@import '~normalize.css';
+@import 'common.less';
+@import 'mixins/index.less';
+
+@font-face {
+    font-family: 'MiSans-Demibold';
+    src: url('https://mall-static.ks3-cn-beijing.ksyuncs.com/font/MiSans-Demibold.woff2')
+}
+
+@font-face {
+    font-family: 'MiSans-Medium';
+    src: url('https://mall-static.ks3-cn-beijing.ksyuncs.com/font/MiSans-Medium.woff2')
+}
+
+#root {
+    overflow: hidden;
+}
+
+button {
+    padding: 0;
+    outline: none !important;
+}
+  
+input::-webkit-input-placeholder {
+    font-size: unit(32/40, rem);
+    color: #CBCBCB !important;
+    line-height: normal;
+}
+  
+input:-moz-placeholder {
+    font-size: unit(32/40, rem);
+    color: #CBCBCB !important;
+}
+  
+input::-moz-placeholder {
+    font-size: unit(32/40, rem);
+    color: #CBCBCB !important;
+}
+  
+input::-ms-input-placeholder {
+    font-size: unit(32/40, rem);
+    color: #CBCBCB !important;
+}
+  
+input {
+    outline: none;
+    caret-color: #3399FF;
+}
+  
+input:focus {
+    box-shadow: none !important;
+    outline: none;
+}
+
+.ant-form .ant-form-item {
+    margin-bottom: 0;
+}
+
+.ant-input:hover {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.ant-input:focus, .ant-input-focused {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.am-list-item {
+    padding: 0;
+    min-height: unset;
+    color: #CBCBCB;
+}
+
+.am-list-item .am-list-line {
+    padding: 0;
+}
+
+.am-list-item .am-list-line .am-list-extra {
+    flex-basis: 100%;
+    padding: 6.5px 11px;
+    width: unit(536/40, rem);
+    height: unit(92/40, rem);
+    font-size: unit(32/40, rem);
+    color: inherit;
+    text-align: left;
+    border: 0;
+    border-radius: unit(15/40, rem);
+    background-color: #F7F7F7;
+}
+
+html body.swal2-height-auto {
+    height: 100vh !important;
+}
+
+.swal2-modal {
+    width: unit(840/40, rem) !important;
+    padding: unit(70/40, rem) !important;
+    font-size: unit(40/40, rem) !important;
+    font-family: 'MiSans-Regular' !important;
+    border-radius: unit(30/40, rem) !important;
+}
+
+.confirmButtonClass, .cancelButtonClass {
+    width: unit(310/40, rem);
+    height: unit(110/40, rem);
+    margin: unit(16/40, rem);
+    color: #ffffff;
+    border-radius: unit(10/40, rem);
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.confirmButtonClass {
+    background-color: #000000;
+}
+
+.cancelButtonClass {
+    color: #1F1F1F;
+    background-color: #ffffff;
+}
+
+.swal2-popup .swal2-title {
+    margin: 0 !important;
+    font-size: unit(48/40, rem) !important;
+    font-family: 'MiSans-Medium' !important;
+    font-weight: normal !important;
+    color: #1F1F1F !important;
+}
+  
+.swal2-popup .swal2-content {
+    margin: unit(60/40, rem) auto unit(100/40, rem) !important;
+    font-size: unit(40/40, rem) !important;
+    font-family: 'MiSans-Regular' !important;
+    color: #1F1F1F !important;
+}
+  
+.swal2-popup #swal2-content {
+    text-align: center !important;
+}
+  
+.swal2-popup .swal2-actions {
+    margin: 0 !important;
+}

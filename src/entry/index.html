@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 14px">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="wb:webmaster" content="186109a626c42fd1"/>
+    <meta name="referrer" content="never">
+    <title>智米数字化系统</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <%htmlWebpackPlugin.options.dependencies.css.forEach(css=>{%>
+    <link rel="stylesheet" href="<%= css %>">
+    <%})%>
+    
+    <!-- Matomo -->
+    <script type="text/javascript">
+        document.addEventListener('keydown', function (event) {
+            if ((event.ctrlKey === true || event.metaKey === true)
+                && (event.which === 173 || event.which === 109
+                    || event.which === 189)) {
+                if (getRatio() <= 0.78) {
+                    event.preventDefault();
+                }
+            }
+        }, false);
+        document.addEventListener('DOMMouseScroll', function (event) {
+            if (event.ctrlKey === true || event.metaKey) {
+                if (getRatio() <= 0.78 && event.deltaY > 0) {
+                    event.preventDefault();
+                }
+            }
+        }, false);
+
+        document.addEventListener('mousewheel', function (event) {
+            if (event.ctrlKey === true || event.metaKey) {
+                if (getRatio() <= 0.78 && event.deltaY > 0) {
+                    event.preventDefault();
+                }
+            }
+        }, false);
+    </script>
+
+</head>
+<body>
+<div id="global-scripts">
+</div>
+<div id="root" >
+</div>
+<!--[if lt IE 9]>
+<p class="browsehappy" style="background: #ccc;color: #000;padding: 11.2px 36px;z-index: 9999;"><a
+        style="float:right;" href="javascript:;" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">点击关闭提示</a>您的浏览器实在
+    <strong>太旧了</strong>，请<a href="https://browsehappy.com/" target="_blank">升级您的浏览器</a>以获得更好的体验。</p><![endif]-->
+<!-- <div hidden> -->
+</div>
+<%htmlWebpackPlugin.options.dependencies.js.forEach(js=>{%>
+<script src="<%=js%>"></script>
+<%})%>
+</body>
+</html>
